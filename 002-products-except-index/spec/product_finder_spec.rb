@@ -12,4 +12,10 @@ describe ProductFinder do
     products = ProductFinder.products_of_all_ints_except_at_index([])
     expect(products).to be_empty
   end
+
+  it 'works when given all 0s' do
+    ints = [0, 0, 0, 0]
+    products = ProductFinder.products_of_all_ints_except_at_index(ints)
+    expect(products).to eq([0, 0, 0, 0])
+  end
 end
